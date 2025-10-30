@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👨‍👩‍👧‍👦 우리 자녀 성향 테스트 - 학부모 역할 찾기</title>
+    
+    <!-- SEO 메타 태그 -->
+    <meta name="description" content="12개의 질문으로 알아보는 우리 아이의 성향! 16가지 유형별 맞춤 학부모 역할을 확인해보세요.">
+    <meta name="keywords" content="자녀 성향, 학부모 역할, 육아, 학습지도, 성격 테스트, 학부모 가이드">
+    
+    <!-- Open Graph (페이스북, 카카오톡 등) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:title" content="👨‍👩‍👧‍👦 우리 자녀 성향 테스트 - 학부모 역할 찾기">
+    <meta property="og:description" content="12개의 질문으로 알아보는 우리 아이의 성향! 16가지 유형별 맞춤 학부모 역할을 확인해보세요.">
+    <meta property="og:url" content="https://troypark.github.io/adotenglish/">
+    <meta property="og:site_name" content="우리 자녀 성향 테스트">
+    <meta property="og:image" content="https://troypark.github.io/adotenglish/thumbnail.jpg">
+    <meta property="og:image:secure_url" content="https://troypark.github.io/adotenglish/thumbnail.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="우리 자녀 성향 테스트 썸네일">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="👨‍👩‍👧‍👦 우리 자녀 성향 테스트">
+    <meta name="twitter:description" content="12개의 질문으로 알아보는 우리 아이의 성향과 맞춤 학부모 역할!">
+    <meta name="twitter:image" content="https://troypark.github.io/adotenglish/thumbnail.jpg">
+    <meta name="twitter:image:alt" content="우리 자녀 성향 테스트 썸네일">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: linear-gradient(135deg, #FFB84D 0%, #FF8E53 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            padding-top: 100px;
+        }
+        
+        .top-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #E65100 0%, #D84315 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .top-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            animation: shine 3s ease-in-out infinite;
+        }
+        
+        @keyframes shine {
+            0% {
+                left: -100%;
+            }
+            50% {
+                left: 100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+        
+        .banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .banner-logo {
+            height: 40px;
+        }
+        
+        .banner-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .banner-text h2 {
+            font-size: 1.5em;
+            font-weight: 900;
+            margin-bottom: 5px;
+        }
+        
+        .banner-text p {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        .banner-btn {
+            background: white;
+            color: #E65100;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .banner-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+        }
+        
+        .container {
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 700px;
+            width: 100%;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,184,77,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .start-section {
+            text-align: center;
+        }
+        
+        .start-section h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+        
+        .start-section .emoji {
+            font-size: 8em;
+            margin: 30px 0;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .start-section p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .start-btn {
+            background: linear-gradient(135deg, #FFB84D 0%, #FF8E53 100%);
+            color: white;
+            border: none;
+            padding: 20px 60px;
+            font-size: 1.3em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255,142,83,0.4);
+        }
+        
+        .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,142,83,0.6);
+        }
+        
+        .quiz-section {
+            display: none;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 15px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FFB84D 0%, #FF8E53 100%);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        .question-number {
+            font-size: 1.1em;
+            color: #FF8E53;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .question {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 40px;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .option-btn {
+            background: #f5f5f5;
+            border: 3px solid transparent;
+            padding: 25px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            font-size: 1.1em;
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .option-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,184,77,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        @media (hover: hover) {
+            .option-btn:hover {
+                border-color: #FFB84D;
+                transform: translateX(10px);
+                background: #fff;
+            }
+            
+            .option-btn:hover::before {
+                left: 100%;
+            }
+        }
+        
+        .option-btn:active {
+            transform: scale(0.98);
+            background: #e8e8e8;
+        }
+        
+        .result-section {
+            display: none;
+            text-align: center;
+        }
+        
+        .result-emoji {
+            font-size: 10em;
+            margin: 20px 0;
+            animation: pop 0.6s ease-out;
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .share-btn-main {
+            background: linear-gradient(135deg, #FFB84D 0%, #FF8E53 100%);
+            color: white;
+            border: none;
+            padding: 15px 50px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            font-size: 1.2em;
+            box-shadow: 0 10px 30px rgba(255,142,83,0.3);
+        }
+        
+        .share-btn-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,142,83,0.5);
+        }
+        
+        @keyframes pop {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .result-type {
+            font-size: 2.5em;
+            color: #FF8E53;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+        
+        .result-title {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        .result-description {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .result-study-method {
+            background: linear-gradient(135deg, rgba(255,184,77,0.1) 0%, rgba(255,142,83,0.1) 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .result-study-method h3 {
+            color: #FF8E53;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .result-study-method ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .result-study-method li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+            font-size: 1.1em;
+        }
+        
+        .result-study-method li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+        
+        .restart-btn {
+            background: linear-gradient(135deg, #FFB84D 0%, #FF8E53 100%);
+            color: white;
+            border: none;
+            padding: 15px 50px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        
+        .restart-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,142,83,0.4);
+        }
+        
+        .disclaimer {
+            font-size: 0.85em;
+            color: #999;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                padding-top: 75px;
+                min-height: 100vh;
+            }
+            
+            .container {
+                padding: 20px 15px;
+                margin: 0 auto;
+            }
+            
+            .top-banner {
+                padding: 8px 10px;
+            }
+            
+            .banner-content {
+                flex-direction: row;
+                gap: 8px;
+                align-items: center;
+            }
+            
+            .banner-logo {
+                height: 18px;
+                flex-shrink: 0;
+            }
+            
+            .banner-text {
+                flex: 1;
+                min-width: auto;
+            }
+            
+            .banner-text h2 {
+                font-size: 0.7em;
+                margin-bottom: 2px;
+                line-height: 1.3;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            .banner-text p {
+                font-size: 0.65em;
+                line-height: 1.3;
+            }
+            
+            .banner-btn {
+                padding: 6px 12px;
+                font-size: 0.75em;
+            }
+            
+            .start-section h1 {
+                font-size: 1.6em;
+                margin-bottom: 15px;
+            }
+            
+            .start-section .emoji {
+                font-size: 4em;
+                margin: 20px 0;
+            }
+            
+            .start-section p {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+            
+            .start-btn {
+                padding: 16px 45px;
+                font-size: 1.1em;
+                margin-top: 20px;
+            }
+            
+            .progress-bar {
+                height: 10px;
+                margin-bottom: 20px;
+            }
+            
+            .question-number {
+                font-size: 0.9em;
+                margin-bottom: 10px;
+            }
+            
+            .question {
+                font-size: 1.1em;
+                margin-bottom: 25px;
+            }
+            
+            .options {
+                gap: 12px;
+            }
+            
+            .option-btn {
+                font-size: 0.95em;
+                padding: 18px;
+            }
+            
+            .result-emoji {
+                font-size: 4em;
+                margin: 10px 0;
+            }
+            
+            .result-type {
+                font-size: 1.8em;
+                margin-bottom: 8px;
+            }
+            
+            .result-title {
+                font-size: 1.3em;
+                margin-bottom: 12px;
+            }
+            
+            .result-description {
+                font-size: 0.9em;
+                margin-bottom: 15px;
+                line-height: 1.5;
+            }
+            
+            .result-study-method {
+                padding: 15px;
+                margin: 15px 0;
+            }
+            
+            .result-study-method h3 {
+                font-size: 1.1em;
+                margin-bottom: 12px;
+            }
+            
+            .result-study-method li {
+                font-size: 0.85em;
+                padding: 6px 0;
+                padding-left: 25px;
+                line-height: 1.4;
+            }
+            
+            .result-study-method li::before {
+                font-size: 0.9em;
+            }
+            
+            .share-buttons {
+                margin-top: 15px;
+            }
+            
+            .share-btn-main {
+                padding: 12px 35px;
+                font-size: 1em;
+            }
+            
+            .restart-btn {
+                padding: 12px 35px;
+                font-size: 1em;
+                margin-top: 12px;
+            }
+            
+            .disclaimer {
+                font-size: 0.75em;
+                margin-top: 10px;
+                margin-bottom: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 상단 띠배너 -->
+    <div class="top-banner">
+        <div class="banner-content">
+            <img src="bi.png" alt="에이닷 영어학원" class="banner-logo">
+            <div class="banner-text">
+                <h2>🎯 1:1 맞춤 영어학원 | 성적이 오르는 에이닷</h2>
+                <p>우리학교 맞춤! 학생에 맞춤! 최적의 영어 학습법 💡</p>
+            </div>
+            <a href="https://www.adotenglish.com/" target="_blank" class="banner-btn">알아보기</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content">
+            <!-- 시작 화면 -->
+            <div class="start-section" id="startSection">
+                <h1>👨‍👩‍👧‍👦 우리 자녀 성향 테스트</h1>
+                <div class="emoji">👶</div>
+                <p>우리 아이는 어떤 성향일까?</p>
+                <p style="font-size: 1em; color: #999;">12개의 질문으로 알아보는 우리 아이 맞춤 학부모 역할</p>
+                <button class="start-btn" onclick="startQuiz()">시작하기</button>
+            </div>
+            
+            <!-- 질문 화면 -->
+            <div class="quiz-section" id="quizSection">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                <div class="question-number" id="questionNumber"></div>
+                <div class="question" id="question"></div>
+                <div class="options" id="options"></div>
+            </div>
+            
+            <!-- 결과 화면 -->
+            <div class="result-section" id="resultSection">
+                <div class="result-emoji" id="resultEmoji"></div>
+                <div class="result-type" id="resultType"></div>
+                <div class="result-title" id="resultTitle"></div>
+                <div class="result-description" id="resultDescription"></div>
+                <div class="result-study-method">
+                    <h3>💡 이런 학부모가 되어주세요</h3>
+                    <ul id="studyMethods"></ul>
+                </div>
+                
+                <p class="disclaimer">본 테스트는 공식 심리검사가 아니며 참고용입니다.</p>
+                
+                <!-- 공유하기 버튼 -->
+                <div class="share-buttons">
+                    <button class="share-btn-main" onclick="shareResult()">
+                        📤 공유하기
+                    </button>
+                </div>
+                
+                <button class="restart-btn" onclick="restartQuiz()">다시 하기</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // MBTI 질문 데이터 (E/I, S/N, T/F, J/P 각 3문항씩)
+        const questions = [
+            // E vs I (외향 vs 내향)
+            {
+                question: "시험 기간, 우리 아이의 공부 스타일은?",
+                options: [
+                    { text: "친구들과 함께 공부하는 걸 더 좋아해요 📢", type: "E" },
+                    { text: "혼자 조용히 집중하는 걸 선호해요 🏠", type: "I" }
+                ]
+            },
+            {
+                question: "모르는 문제가 생겼을 때 우리 아이는?",
+                options: [
+                    { text: "바로 친구나 가족에게 물어보고 이야기해요 💬", type: "E" },
+                    { text: "혼자 고민하고 스스로 해결하려고 해요 🔍", type: "I" }
+                ]
+            },
+            {
+                question: "공부하다가 쉬는 시간이 생기면?",
+                options: [
+                    { text: "친구들과 소통하며 에너지를 얻어요 📱", type: "E" },
+                    { text: "혼자만의 시간을 가지며 재충전해요 🎧", type: "I" }
+                ]
+            },
+            
+            // S vs N (감각 vs 직관)
+            {
+                question: "새로운 개념을 배울 때 우리 아이는?",
+                options: [
+                    { text: "구체적인 예시와 실습을 통해 이해해요 📝", type: "S" },
+                    { text: "전체적인 개념과 큰 그림을 먼저 파악해요 🌐", type: "N" }
+                ]
+            },
+            {
+                question: "노트 정리할 때 우리 아이의 스타일은?",
+                options: [
+                    { text: "순서대로 꼼꼼하게 정리해요 📚", type: "S" },
+                    { text: "창의적으로 연결하여 자유롭게 정리해요 ✨", type: "N" }
+                ]
+            },
+            {
+                question: "공부 계획을 세울 때 우리 아이는?",
+                options: [
+                    { text: "구체적인 분량과 목표를 정확히 정해요 ✅", type: "S" },
+                    { text: "큰 틀만 정하고 유연하게 조절해요 🎯", type: "N" }
+                ]
+            },
+            
+            // T vs F (사고 vs 감정)
+            {
+                question: "성적이 안 나왔을 때 우리 아이는?",
+                options: [
+                    { text: "원인을 분석하고 논리적으로 대처해요 📊", type: "T" },
+                    { text: "감정적으로 힘들어하고 위로가 필요해요 😢", type: "F" }
+                ]
+            },
+            {
+                question: "우리 아이의 공부 동기는 주로?",
+                options: [
+                    { text: "구체적인 목표나 성과 달성이에요 🎓", type: "T" },
+                    { text: "칭찬이나 인정, 격려예요 💕", type: "F" }
+                ]
+            },
+            {
+                question: "그룹 과제를 할 때 우리 아이는?",
+                options: [
+                    { text: "효율적인 역할 분담과 결과를 중시해요 🔧", type: "T" },
+                    { text: "팀 분위기와 조화를 먼저 생각해요 🤝", type: "F" }
+                ]
+            },
+            
+            // J vs P (판단 vs 인식)
+            {
+                question: "시험 한 달 전, 우리 아이의 모습은?",
+                options: [
+                    { text: "미리 계획을 세우고 차근차근 준비해요 📅", type: "J" },
+                    { text: "나중에 몰아서 하는 편이에요 ⏰", type: "P" }
+                ]
+            },
+            {
+                question: "우리 아이의 스케줄 관리 방식은?",
+                options: [
+                    { text: "규칙적인 루틴을 선호해요 ⏱️", type: "J" },
+                    { text: "그때그때 상황에 따라 유연하게 해요 🎪", type: "P" }
+                ]
+            },
+            {
+                question: "공부하다가 궁금한 게 생기면?",
+                options: [
+                    { text: "메모해두고 계획을 먼저 마무리해요 📋", type: "J" },
+                    { text: "바로 찾아보고 호기심을 따라가요 🐰", type: "P" }
+                ]
+            }
+        ];
+
+        // 자녀 성향별 학부모 역할 데이터
+        const results = {
+            INTJ: {
+                emoji: "🎯",
+                title: "전략적 가이드 부모",
+                description: "우리 아이는 독립적이고 전략적인 사고를 가진 아이입니다. 스스로 계획을 세우고 실행하는 걸 좋아하며, 논리적인 설명을 중요하게 여깁니다. 완벽주의 성향이 강해 스트레스를 받을 수 있어요.",
+                methods: [
+                    "아이의 장기 목표 설정을 함께 논의하고 지지해주세요",
+                    "감정적 표현보다 논리적 근거로 대화하세요",
+                    "독립적인 학습 공간과 시간을 충분히 제공하세요",
+                    "완벽주의로 인한 스트레스를 이해하고 실패도 괜찮다고 알려주세요",
+                    "아이의 아이디어와 계획을 존중하고 개입을 최소화하세요",
+                    "1:1 학습을 통해 깊이 있는 개념 탐구와 전략적 학습 로드맵을 제공하세요"
+                ]
+            },
+            INTP: {
+                emoji: "🤔",
+                title: "호기심 촉진 부모",
+                description: "우리 아이는 탐구심이 강하고 원리를 이해하길 좋아합니다. 창의적이고 분석적이지만, 실천력이 부족할 수 있어요. 관심사에 깊이 빠지면 놀라운 집중력을 보입니다.",
+                methods: [
+                    "아이의 '왜?'라는 질문을 환영하고 함께 탐구하세요",
+                    "이론적 토대를 먼저 이해할 시간을 주세요",
+                    "실천 계획은 구체적으로 함께 세워주세요",
+                    "관심 분야에 대한 자료와 기회를 제공하세요",
+                    "결과보다 과정과 사고 방식을 칭찬해주세요",
+                    "1:1 학습을 통해 호기심 기반 맞춤 커리큘럼과 실천력 코칭을 제공하세요"
+                ]
+            },
+            ENTJ: {
+                emoji: "👑",
+                title: "리더십 지원 부모",
+                description: "우리 아이는 타고난 리더십을 가지고 있으며 목표 지향적입니다. 효율성과 성과를 중시하고, 다른 사람들을 이끄는 걸 즐깁니다. 때로는 너무 강하게 밀어붙여 스트레스를 받을 수 있어요.",
+                methods: [
+                    "명확한 목표와 기대치를 함께 설정하세요",
+                    "리더십 경험 기회를 제공하세요 (스터디 그룹, 프로젝트)",
+                    "효율성을 인정하되, 과정의 중요성도 알려주세요",
+                    "가끔은 쉬는 것도 전략이라고 가르쳐주세요",
+                    "타인의 감정을 배려하는 방법을 함께 배워가세요",
+                    "1:1 학습을 통해 목표 달성 중심의 효율적 학습 전략과 리더십 코칭을 제공하세요"
+                ]
+            },
+            ENTP: {
+                emoji: "🎪",
+                title: "유연성 코칭 부모",
+                description: "우리 아이는 창의적이고 논쟁을 즐기는 토론가입니다. 다양한 아이디어가 넘치지만, 집중력과 실행력이 부족할 수 있어요. 새로운 것에 대한 호기심이 많습니다.",
+                methods: [
+                    "토론과 논쟁을 긍정적으로 받아들이세요",
+                    "다양한 학습 방법을 시도할 수 있도록 지원하세요",
+                    "하나를 완성하는 것의 가치를 함께 경험하세요",
+                    "짧은 집중 시간부터 시작해 점차 늘려가세요",
+                    "창의적 아이디어를 인정하되, 실행 계획도 함께 세우세요",
+                    "<strong>1:1 학습</strong>을 통해 창의적 사고 확장과 집중력 향상 프로그램을 제공하세요"
+                ]
+            },
+            INFJ: {
+                emoji: "🌙",
+                title: "공감적 이해 부모",
+                description: "우리 아이는 통찰력이 있고 깊이 있는 사고를 합니다. 의미와 가치를 중시하며, 완벽주의 성향이 있어요. 감수성이 풍부하고 타인을 잘 이해합니다.",
+                methods: [
+                    "아이의 내면 세계와 가치관을 존중해주세요",
+                    "조용하고 안정적인 환경을 제공하세요",
+                    "의미 있는 목표와 비전을 함께 그려보세요",
+                    "완벽주의로 인한 번아웃을 주의하세요",
+                    "정서적 지지와 깊은 대화 시간을 가지세요",
+                    "<strong>1:1 학습</strong>을 통해 가치 중심 심층 학습과 정서적 안정 기반 맞춤 교육을 제공하세요"
+                ]
+            },
+            INFP: {
+                emoji: "🌸",
+                title: "감성 지원 부모",
+                description: "우리 아이는 창의적이고 감수성이 풍부한 이상주의자입니다. 자신의 가치관과 일치하는 것에는 열정적이지만, 그렇지 않으면 동기부여가 어려워요.",
+                methods: [
+                    "아이의 감정과 가치관을 깊이 이해하고 존중하세요",
+                    "관심사와 학습을 연결시켜 의미를 부여하세요",
+                    "창의적인 표현 방법을 격려하세요",
+                    "강요보다는 내적 동기를 끌어내세요",
+                    "작은 목표를 함께 세우고 성취감을 느끼게 하세요",
+                    "<strong>1:1 학습</strong>을 통해 관심사 기반 맞춤 커리큘럼과 내적 동기 부여 코칭을 제공하세요"
+                ]
+            },
+            ENFJ: {
+                emoji: "✨",
+                title: "공동체 조력 부모",
+                description: "우리 아이는 타인을 돕고 조화를 중시하는 따뜻한 리더입니다. 공감 능력이 뛰어나고 다른 사람의 성장을 돕는 것에서 기쁨을 느낍니다. 때로는 자신을 희생할 수 있어요.",
+                methods: [
+                    "협력 학습과 그룹 활동 기회를 제공하세요",
+                    "타인을 돕는 행동을 칭찬하되, 자기 관리도 중요하다고 알려주세요",
+                    "리더십과 소통 능력을 발전시킬 기회를 주세요",
+                    "자신의 감정과 필요도 표현하도록 격려하세요",
+                    "긍정적인 피드백과 인정을 자주 해주세요",
+                    "<strong>1:1 학습</strong>을 통해 공감 능력을 활용한 학습 전략과 자기 돌봄 코칭을 제공하세요"
+                ]
+            },
+            ENFP: {
+                emoji: "🎨",
+                title: "열정 격려 부모",
+                description: "우리 아이는 열정적이고 창의적인 자유로운 영혼입니다. 새로운 것에 호기심이 많고 재미를 추구하지만, 집중력과 끈기가 부족할 수 있어요.",
+                methods: [
+                    "다양한 경험과 활동을 제공하세요",
+                    "재미있는 학습 방법을 함께 찾아보세요",
+                    "열정을 인정하되, 완성의 중요성도 알려주세요",
+                    "짧은 목표를 설정하고 보상 시스템을 활용하세요",
+                    "창의성을 격려하고 긍정적인 에너지를 지지하세요",
+                    "<strong>1:1 학습</strong>을 통해 흥미 중심 다양한 학습법과 과제 완성 능력을 키워주세요"
+                ]
+            },
+            ISTJ: {
+                emoji: "📚",
+                title: "체계적 지원 부모",
+                description: "우리 아이는 책임감이 강하고 체계적입니다. 규칙과 루틴을 중시하며 성실하게 일을 완수합니다. 안정적이고 신뢰할 수 있지만, 변화에 스트레스를 받을 수 있어요.",
+                methods: [
+                    "명확한 규칙과 일관된 루틴을 제공하세요",
+                    "체크리스트와 계획표를 함께 만들어보세요",
+                    "성실함과 책임감을 인정하고 칭찬하세요",
+                    "새로운 시도도 안전하다는 것을 보여주세요",
+                    "구체적이고 실용적인 목표를 설정하세요",
+                    "<strong>1:1 학습</strong>을 통해 체계적인 학습 루틴과 단계별 목표 달성 프로그램을 제공하세요"
+                ]
+            },
+            ISFJ: {
+                emoji: "📖",
+                title: "세심한 보살핌 부모",
+                description: "우리 아이는 성실하고 세심하며 타인을 배려합니다. 꼼꼼하고 책임감이 강하지만, 자신의 필요를 뒤로 미룰 수 있어요. 안정과 조화를 중시합니다.",
+                methods: [
+                    "아이의 노력과 헌신을 구체적으로 인정하세요",
+                    "안정적이고 따뜻한 환경을 조성하세요",
+                    "완벽주의를 내려놓고 '충분히 좋다'를 알려주세요",
+                    "자신의 의견도 중요하다는 것을 격려하세요",
+                    "변화는 천천히, 단계적으로 접근하세요",
+                    "<strong>1:1 학습</strong>을 통해 안정적 환경에서 꼼꼼한 학습 지도와 자기표현 코칭을 제공하세요"
+                ]
+            },
+            ESTJ: {
+                emoji: "⏰",
+                title: "조직적 관리 부모",
+                description: "우리 아이는 조직적이고 실용적입니다. 효율성과 결과를 중시하며, 명확한 규칙과 구조를 선호합니다. 리더십이 있지만, 융통성이 부족할 수 있어요.",
+                methods: [
+                    "명확한 기대치와 목표를 설정하세요",
+                    "시간 관리와 조직 능력을 인정하세요",
+                    "구체적인 피드백과 평가를 제공하세요",
+                    "융통성과 다른 관점의 가치를 알려주세요",
+                    "리더십 기회를 제공하되, 협력의 중요성도 강조하세요",
+                    "<strong>1:1 학습</strong>을 통해 효율적인 시간 관리 전략과 리더십 개발 프로그램을 제공하세요"
+                ]
+            },
+            ESFJ: {
+                emoji: "🤗",
+                title: "소통 협력 부모",
+                description: "우리 아이는 사교적이고 협력적입니다. 타인의 인정과 조화를 중시하며, 그룹 활동을 선호합니다. 분위기에 민감하고 배려심이 많아요.",
+                methods: [
+                    "스터디 그룹이나 협력 학습 기회를 제공하세요",
+                    "긍정적인 피드백과 격려를 자주 해주세요",
+                    "사회적 활동과 학습을 연결하세요",
+                    "독립적인 학습 능력도 길러주세요",
+                    "아이의 배려와 협력을 구체적으로 칭찬하세요",
+                    "<strong>1:1 학습</strong>을 통해 긍정적 피드백 기반 맞춤 학습과 자기주도성을 키워주세요"
+                ]
+            },
+            ISTP: {
+                emoji: "🔧",
+                title: "실용적 해결 부모",
+                description: "우리 아이는 실용적이고 논리적입니다. 실습과 경험을 통해 배우는 것을 선호하며, 문제 해결을 즐깁니다. 독립적이지만 감정 표현이 서툴 수 있어요.",
+                methods: [
+                    "실습과 체험 중심의 학습 기회를 제공하세요",
+                    "문제 해결 과정을 존중하고 시간을 주세요",
+                    "독립성을 인정하되, 필요시 지원을 제공하세요",
+                    "개념과 실전의 균형을 맞춰주세요",
+                    "감정 표현을 강요하지 말고 자연스럽게 유도하세요",
+                    "<strong>1:1 학습</strong>을 통해 실습 중심 문제 해결 학습과 개념 이해를 균형있게 제공하세요"
+                ]
+            },
+            ISFP: {
+                emoji: "🎵",
+                title: "예술적 감각 부모",
+                description: "우리 아이는 감성적이고 예술적입니다. 자신만의 속도로 배우고, 시각적·감각적 학습을 선호합니다. 자유로운 환경에서 창의성을 발휘합니다.",
+                methods: [
+                    "시각 자료와 다양한 감각을 활용한 학습을 지원하세요",
+                    "창의적인 표현 방법을 격려하세요",
+                    "아이만의 속도와 스타일을 존중하세요",
+                    "강요보다는 부드러운 격려로 이끌어주세요",
+                    "예술적·창의적 활동을 학습과 연결하세요",
+                    "<strong>1:1 학습</strong>을 통해 감각 활용 맞춤 학습법과 자기 표현력을 키워주세요"
+                ]
+            },
+            ESTP: {
+                emoji: "⚡",
+                title: "활동적 동기부여 부모",
+                description: "우리 아이는 에너지가 넘치고 행동 지향적입니다. 실전과 경험을 통해 빠르게 배우며, 지루함을 못 참습니다. 즉각적인 결과를 선호합니다.",
+                methods: [
+                    "짧고 집중적인 학습 시간을 설정하세요",
+                    "실습과 게임 형식의 학습을 제공하세요",
+                    "경쟁과 도전을 통해 동기를 부여하세요",
+                    "움직임과 활동을 학습에 통합하세요",
+                    "장기 계획의 중요성을 경험으로 알려주세요",
+                    "<strong>1:1 학습</strong>을 통해 활동 중심 역동적 학습과 장기 계획 능력을 키워주세요"
+                ]
+            },
+            ESFP: {
+                emoji: "🎉",
+                title: "즐거움 창조 부모",
+                description: "우리 아이는 긍정적이고 사교적입니다. 재미와 즐거움을 추구하며, 사람들과 함께하는 것을 좋아합니다. 순간을 즐기지만 계획성이 부족할 수 있어요.",
+                methods: [
+                    "재미있고 흥미로운 학습 방법을 찾아주세요",
+                    "짧은 목표와 즉각적인 보상을 활용하세요",
+                    "그룹 활동과 협력 학습 기회를 제공하세요",
+                    "긍정적인 에너지를 인정하고 격려하세요",
+                    "꾸준함의 가치를 재미있게 가르쳐주세요",
+                    "<strong>1:1 학습</strong>을 통해 재미있는 학습 경험과 지속 가능한 학습 습관을 제공하세요"
+                ]
+            }
+        };
+
+        let currentQuestion = 0;
+        let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+
+        function startQuiz() {
+            document.getElementById('startSection').style.display = 'none';
+            document.getElementById('quizSection').style.display = 'block';
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const question = questions[currentQuestion];
+            const progress = ((currentQuestion + 1) / questions.length) * 100;
+            
+            document.getElementById('progressBar').style.width = progress + '%';
+            document.getElementById('questionNumber').textContent = `${currentQuestion + 1} / ${questions.length}`;
+            document.getElementById('question').textContent = question.question;
+            
+            const optionsHtml = question.options.map((option, index) => 
+                `<button class="option-btn" onclick="selectOption('${option.type}')">${option.text}</button>`
+            ).join('');
+            
+            document.getElementById('options').innerHTML = optionsHtml;
+        }
+
+        function selectOption(type) {
+            scores[type]++;
+            currentQuestion++;
+            
+            // 모바일에서 버튼 포커스 제거
+            if (document.activeElement) {
+                document.activeElement.blur();
+            }
+            
+            if (currentQuestion < questions.length) {
+                showQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            const styleType = 
+                (scores.E > scores.I ? 'E' : 'I') +
+                (scores.S > scores.N ? 'S' : 'N') +
+                (scores.T > scores.F ? 'T' : 'F') +
+                (scores.J > scores.P ? 'J' : 'P');
+            
+            const result = results[styleType];
+            
+            document.getElementById('quizSection').style.display = 'none';
+            document.getElementById('resultSection').style.display = 'block';
+            
+            document.getElementById('resultEmoji').textContent = result.emoji;
+            document.getElementById('resultType').textContent = "SOLUTION";
+            document.getElementById('resultTitle').textContent = result.title;
+            document.getElementById('resultDescription').textContent = result.description;
+            
+            const methodsHtml = result.methods.map(method => `<li>${method}</li>`).join('');
+            document.getElementById('studyMethods').innerHTML = methodsHtml;
+        }
+        
+        // 공유하기 함수 (Web Share API 사용)
+        function shareResult() {
+            const type = document.getElementById('resultType').textContent;
+            const title = document.getElementById('resultTitle').textContent;
+            const description = document.getElementById('resultDescription').textContent;
+            const url = window.location.href.split('?')[0];
+            
+            // 공유 텍스트 작성 (URL 포함)
+            const shareText = `👨‍👩‍👧‍👦 우리 자녀 성향 테스트 결과\n\n` +
+                `맞춤 학부모 역할: "${title}"\n\n` +
+                `${description}\n\n` +
+                `여러분도 자녀 성향을 확인해보세요! 👇\n` +
+                url;
+            
+            const shareData = {
+                title: '우리 자녀 성향 테스트 결과',
+                text: shareText
+            };
+            
+            // Web Share API 지원 여부 확인
+            if (navigator.share) {
+                navigator.share(shareData)
+                    .then(() => console.log('공유 성공!'))
+                    .catch((error) => {
+                        if (error.name !== 'AbortError') {
+                            console.log('공유 실패:', error);
+                            fallbackShare(shareText);
+                        }
+                    });
+            } else {
+                // Web Share API를 지원하지 않는 경우 텍스트 복사
+                fallbackShare(shareText);
+            }
+        }
+        
+        // Web Share API를 지원하지 않는 경우 텍스트 복사
+        function fallbackShare(shareText) {
+            navigator.clipboard.writeText(shareText).then(() => {
+                alert('✅ 결과가 복사되었습니다!\n카카오톡이나 메시지에 붙여넣기해서 친구들에게 공유해보세요 😊');
+            }).catch(() => {
+                // 클립보드 API도 지원하지 않는 경우
+                const textArea = document.createElement('textarea');
+                textArea.value = shareText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    alert('✅ 결과가 복사되었습니다!\n카카오톡이나 메시지에 붙여넣기해서 친구들에게 공유해보세요 😊');
+                } catch (err) {
+                    alert('공유 기능을 사용할 수 없습니다.');
+                }
+                document.body.removeChild(textArea);
+            });
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+            document.getElementById('resultSection').style.display = 'none';
+            document.getElementById('startSection').style.display = 'block';
+        }
+    </script>
+    
+    <script type="text/javascript" src="//wcs.pstatic.net/wcslog.js"></script>
+    <script type="text/javascript">
+    if(!wcs_add) var wcs_add = {};
+    wcs_add["wa"] = "152837749e1fda0";
+    if(window.wcs) {
+      wcs_do();
+    }
+    </script>
+</body>
+</html>
+
