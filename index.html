@@ -321,7 +321,10 @@
         .share-buttons {
             display: flex;
             justify-content: center;
+            align-items: center;
+            gap: 15px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
         
         .share-btn-main {
@@ -335,11 +338,22 @@
             transition: all 0.3s ease;
             font-size: 1.2em;
             box-shadow: 0 10px 30px rgba(255,142,83,0.3);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
         }
         
         .share-btn-main:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 40px rgba(255,142,83,0.5);
+        }
+        
+        .learn-more-btn {
+            background: linear-gradient(135deg, #E65100 0%, #D84315 100%);
+        }
+        
+        .learn-more-btn:hover {
+            box-shadow: 0 15px 40px rgba(230,81,0,0.5);
         }
         
         @keyframes pop {
@@ -570,11 +584,15 @@
             
             .share-buttons {
                 margin-top: 15px;
+                flex-direction: column;
+                gap: 10px;
             }
             
             .share-btn-main {
                 padding: 12px 35px;
                 font-size: 1em;
+                width: 100%;
+                max-width: 280px;
             }
             
             .restart-btn {
@@ -640,6 +658,9 @@
                 
                 <!-- 공유하기 버튼 -->
                 <div class="share-buttons">
+                    <a href="https://www.adotenglish.com/" target="_blank" class="share-btn-main learn-more-btn">
+                        📚 1:1학습 더 알아보기
+                    </a>
                     <button class="share-btn-main" onclick="shareResult()">
                         📤 공유하기
                     </button>
@@ -914,7 +935,7 @@
                     "독립성을 인정하되, 필요시 지원을 제공하세요",
                     "개념과 실전의 균형을 맞춰주세요",
                     "감정 표현을 강요하지 말고 자연스럽게 유도하세요",
-                    "<strong>1:1 학습</strong>을 통해 실습 중심 문제 해결 능력과 개념 이해를 균형있게 제공하세요"
+                    "<strong>1:1 학습</strong>을 통해 실습 중심 문제 해결 학습과 개념 이해를 균형있게 제공하세요"
                 ]
             },
             ISFP: {
@@ -1045,7 +1066,7 @@
                         console.log('공유 성공!');
                         // 네이버 애널리틱스 이벤트 전송
                         if (typeof wcs !== 'undefined' && wcs.event) {
-                            wcs.event('(parents)공유', '공유횟수', title);
+                            wcs.event('공유', '공유횟수', title);
                         }
                     })
                     .catch((error) => {
@@ -1066,7 +1087,7 @@
                 alert('✅ 결과가 복사되었습니다!\n카카오톡이나 메시지에 붙여넣기해서 친구들에게 공유해보세요 😊');
                 // 네이버 애널리틱스 이벤트 전송
                 if (typeof wcs !== 'undefined' && wcs.event) {
-                    wcs.event('(parents)공유', '공유횟수', title);
+                    wcs.event('공유', '공유횟수', title);
                 }
             }).catch(() => {
                 // 클립보드 API도 지원하지 않는 경우
@@ -1079,7 +1100,7 @@
                     alert('✅ 결과가 복사되었습니다!\n카카오톡이나 메시지에 붙여넣기해서 친구들에게 공유해보세요 😊');
                     // 네이버 애널리틱스 이벤트 전송
                     if (typeof wcs !== 'undefined' && wcs.event) {
-                        wcs.event('(parents)공유', '공유횟수', title);
+                        wcs.event('공유', '공유횟수', title);
                     }
                 } catch (err) {
                     alert('공유 기능을 사용할 수 없습니다.');
