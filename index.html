@@ -658,7 +658,7 @@
                 
                 <!-- 공유하기 버튼 -->
                 <div class="share-buttons">
-                    <a href="https://www.adotenglish.com/" target="_blank" class="share-btn-main learn-more-btn">
+                    <a href="https://www.adotenglish.com/" target="_blank" class="share-btn-main learn-more-btn" onclick="trackAdotVisit()">
                         📚 1:1학습 더 알아보기
                     </a>
                     <button class="share-btn-main" onclick="shareResult()">
@@ -1107,6 +1107,14 @@
                 }
                 document.body.removeChild(textArea);
             });
+        }
+
+        // 에이닷 홈페이지 방문 추적
+        function trackAdotVisit() {
+            // 네이버 애널리틱스 이벤트 전송
+            if (typeof wcs !== 'undefined' && wcs.event) {
+                wcs.event('홈페이지유입', '에이닷홈페이지');
+            }
         }
 
         function restartQuiz() {
