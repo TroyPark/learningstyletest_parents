@@ -1066,7 +1066,7 @@
                         console.log('공유 성공!');
                         // 네이버 애널리틱스 이벤트 전송
                         if (typeof wcs !== 'undefined' && wcs.event) {
-                            wcs.event('공유', '공유횟수', title);
+                            wcs.event('(parents)공유', '공유횟수', title);
                         }
                     })
                     .catch((error) => {
@@ -1087,7 +1087,7 @@
                 alert('✅ 결과가 복사되었습니다!\n카카오톡이나 메시지에 붙여넣기해서 친구들에게 공유해보세요 😊');
                 // 네이버 애널리틱스 이벤트 전송
                 if (typeof wcs !== 'undefined' && wcs.event) {
-                    wcs.event('공유', '공유횟수', title);
+                    wcs.event('(parents)공유', '공유횟수', title);
                 }
             }).catch(() => {
                 // 클립보드 API도 지원하지 않는 경우
@@ -1100,7 +1100,7 @@
                     alert('✅ 결과가 복사되었습니다!\n카카오톡이나 메시지에 붙여넣기해서 친구들에게 공유해보세요 😊');
                     // 네이버 애널리틱스 이벤트 전송
                     if (typeof wcs !== 'undefined' && wcs.event) {
-                        wcs.event('공유', '공유횟수', title);
+                        wcs.event('(parents)공유', '공유횟수', title);
                     }
                 } catch (err) {
                     alert('공유 기능을 사용할 수 없습니다.');
