@@ -1077,6 +1077,14 @@
                         if (typeof wcs !== 'undefined' && wcs.event) {
                             wcs.event('(parents)공유', '공유횟수', title);
                         }
+                        // Google Analytics 이벤트 전송
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'share', {
+                                'method': 'Web Share API',
+                                'content_type': 'parents_test_result',
+                                'item_id': title
+                            });
+                        }
                     })
                     .catch((error) => {
                         if (error.name !== 'AbortError') {
@@ -1098,6 +1106,14 @@
                 if (typeof wcs !== 'undefined' && wcs.event) {
                     wcs.event('(parents)공유', '공유횟수', title);
                 }
+                // Google Analytics 이벤트 전송
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'share', {
+                        'method': 'Clipboard',
+                        'content_type': 'parents_test_result',
+                        'item_id': title
+                    });
+                }
             }).catch(() => {
                 // 클립보드 API도 지원하지 않는 경우
                 const textArea = document.createElement('textarea');
@@ -1110,6 +1126,14 @@
                     // 네이버 애널리틱스 이벤트 전송
                     if (typeof wcs !== 'undefined' && wcs.event) {
                         wcs.event('(parents)공유', '공유횟수', title);
+                    }
+                    // Google Analytics 이벤트 전송
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'share', {
+                            'method': 'execCommand',
+                            'content_type': 'parents_test_result',
+                            'item_id': title
+                        });
                     }
                 } catch (err) {
                     alert('공유 기능을 사용할 수 없습니다.');
@@ -1144,4 +1168,3 @@
     </script>
 </body>
 </html>
-
