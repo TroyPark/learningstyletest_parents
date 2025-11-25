@@ -105,7 +105,7 @@ const results = {
             "독립적인 학습 공간과 시간을 충분히 제공하세요",
             "완벽주의로 인한 스트레스를 이해하고 실패도 괜찮다고 알려주세요",
             "아이의 아이디어와 계획을 존중하고 개입을 최소화하세요",
-            "<strong>1:1 학습</strong>을 통해 깊이 있는 개념 탐구와 전략적 학습 로드맵을 제공하세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 깊이 있는 개념 탐구와 전략적 학습 로드맵을 제공하세요"
         ]
     },
     INTP: {
@@ -118,7 +118,7 @@ const results = {
             "실천 계획은 구체적으로 함께 세워주세요",
             "관심 분야에 대한 자료와 기회를 제공하세요",
             "결과보다 과정과 사고 방식을 칭찬해주세요",
-            "<strong>1:1 학습</strong>을 통해 호기심 기반 맞춤 커리큘럼과 실천력 코칭을 제공하세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 호기심 기반 맞춤 커리큘럼과 실천력 코칭을 제공하세요"
         ]
     },
     ENTJ: {
@@ -131,7 +131,7 @@ const results = {
             "효율성을 인정하되, 과정의 중요성도 알려주세요",
             "가끔은 쉬는 것도 전략이라고 가르쳐주세요",
             "타인의 감정을 배려하는 방법을 함께 배워가세요",
-            "<strong>1:1 학습</strong>을 통해 목표 달성 중심의 효율적 학습 전략과 리더십 코칭을 제공하세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 목표 달성 중심의 효율적 학습 전략과 리더십 코칭을 제공하세요"
         ]
     },
     ENTP: {
@@ -144,7 +144,7 @@ const results = {
             "하나를 완성하는 것의 가치를 함께 경험하세요",
             "짧은 집중 시간부터 시작해 점차 늘려가세요",
             "창의적 아이디어를 인정하되, 실행 계획도 함께 세우세요",
-            "<strong>1:1 학습</strong>을 통해 창의적 사고 확장과 집중력 향상 프로그램을 제공하세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 창의적 사고 확장과 집중력 향상 프로그램을 제공하세요"
         ]
     },
     INFJ: {
@@ -157,7 +157,7 @@ const results = {
             "의미 있는 목표와 비전을 함께 그려보세요",
             "완벽주의로 인한 번아웃을 주의하세요",
             "정서적 지지와 깊은 대화 시간을 가지세요",
-            "<strong>1:1 학습</strong>을 통해 가치 중심 심층 학습과 정서적 안정 기반 맞춤 교육을 제공하세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 가치 중심 심층 학습과 정서적 안정 기반 맞춤 교육을 제공하세요"
         ]
     },
     INFP: {
@@ -170,7 +170,7 @@ const results = {
             "창의적인 표현 방법을 격려하세요",
             "강요보다는 내적 동기를 끌어내세요",
             "작은 목표를 함께 세우고 성취감을 느끼게 하세요",
-            "<strong>1:1 학습</strong>을 통해 관심사 기반 맞춤 커리큘럼과 내적 동기 부여 코칭을 제공하세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 관심사 기반 맞춤 커리큘럼과 내적 동기 부여 코칭을 제공하세요"
         ]
     },
     ENFJ: {
@@ -183,7 +183,7 @@ const results = {
             "리더십과 소통 능력을 발전시킬 기회를 주세요",
             "자신의 감정과 필요도 표현하도록 격려하세요",
             "긍정적인 피드백과 인정을 자주 해주세요",
-            "<strong>1:1 학습</strong>을 통해 공감 능력을 활용한 학습 전략과 자기 돌봄 코칭을 제공하세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 공감 능력을 활용한 학습 전략과 자기 돌봄 코칭을 제공하세요"
         ]
     },
     ENFP: {
@@ -196,7 +196,7 @@ const results = {
             "열정을 인정하되, 완성의 중요성도 알려주세요",
             "짧은 목표를 설정하고 보상 시스템을 활용하세요",
             "창의성을 격려하고 긍정적인 에너지를 지지하세요",
-            "<strong>1:1 학습</strong>을 통해 흥미 중심 다양한 학습법과 과제 완성 능력을 키워주세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 흥미 중심 다양한 학습법과 과제 완성 능력을 키워주세요"
         ]
     },
     ISTJ: {
@@ -209,7 +209,7 @@ const results = {
             "성실함과 책임감을 인정하고 칭찬하세요",
             "새로운 시도도 안전하다는 것을 보여주세요",
             "구체적이고 실용적인 목표를 설정하세요",
-            "<strong>1:1 학습</strong>을 통해 체계적인 학습 루틴과 단계별 목표 달성 프로그램을 제공하세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 체계적인 학습 루틴과 단계별 목표 달성 프로그램을 제공하세요"
         ]
     },
     ISFJ: {
@@ -222,7 +222,7 @@ const results = {
             "완벽주의를 내려놓고 '충분히 좋다'를 알려주세요",
             "자신의 의견도 중요하다는 것을 격려하세요",
             "변화는 천천히, 단계적으로 접근하세요",
-            "<strong>1:1 학습</strong>을 통해 안정적 환경에서 꼼꼼한 학습 지도와 자기표현 코칭을 제공하세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 안정적 환경에서 꼼꼼한 학습 지도와 자기표현 코칭을 제공하세요"
         ]
     },
     ESTJ: {
@@ -235,7 +235,7 @@ const results = {
             "구체적인 피드백과 평가를 제공하세요",
             "융통성과 다른 관점의 가치를 알려주세요",
             "리더십 기회를 제공하되, 협력의 중요성도 강조하세요",
-            "<strong>1:1 학습</strong>을 통해 효율적인 시간 관리 전략과 리더십 개발 프로그램을 제공하세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 효율적인 시간 관리 전략과 리더십 개발 프로그램을 제공하세요"
         ]
     },
     ESFJ: {
@@ -248,7 +248,7 @@ const results = {
             "사회적 활동과 학습을 연결하세요",
             "독립적인 학습 능력도 길러주세요",
             "아이의 배려와 협력을 구체적으로 칭찬하세요",
-            "<strong>1:1 학습</strong>을 통해 긍정적 피드백 기반 맞춤 학습과 자기주도성을 키워주세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 긍정적 피드백 기반 맞춤 학습과 자기주도성을 키워주세요"
         ]
     },
     ISTP: {
@@ -261,7 +261,7 @@ const results = {
             "독립성을 인정하고, 통제없이 필요시 지원을 제공하세요",
             "개념과 실전의 균형을 맞춰주세요",
             "감정 표현을 강요하지 말고 자연스럽게 유도하세요",
-            "<strong>1:1 학습</strong>을 통해 실습 중심 문제 해결 학습과 개념 이해를 균형있게 제공하세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 실습 중심 문제 해결 학습과 개념 이해를 균형있게 제공하세요"
         ]
     },
     ISFP: {
@@ -274,7 +274,7 @@ const results = {
             "아이만의 속도와 스타일을 존중하세요",
             "강요보다는 부드러운 격려로 이끌어주세요",
             "예술적·창의적 활동을 학습과 연결하세요",
-            "<strong>1:1 학습</strong>을 통해 감각 활용 맞춤 학습법과 자기 표현력을 키워주세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 감각 활용 맞춤 학습법과 자기 표현력을 키워주세요"
         ]
     },
     ESTP: {
@@ -287,7 +287,7 @@ const results = {
             "경쟁과 도전을 통해 동기를 부여하세요",
             "움직임과 활동을 학습에 통합하세요",
             "장기 계획의 중요성을 경험으로 알려주세요",
-            "<strong>1:1 학습</strong>을 통해 활동 중심 역동적 학습과 장기 계획 능력을 키워주세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 활동 중심 역동적 학습과 장기 계획 능력을 키워주세요"
         ]
     },
     ESFP: {
@@ -300,7 +300,7 @@ const results = {
             "그룹 활동과 협력 학습 기회를 제공하세요",
             "긍정적인 에너지를 인정하고 격려하세요",
             "꾸준함의 가치를 재미있게 가르쳐주세요",
-            "<strong>1:1 학습</strong>을 통해 재미있는 학습 경험과 지속 가능한 학습 습관을 제공하세요"
+            "<strong><span class='highlight-text'>1:1 맞춤 학습</span></strong>을 통해 재미있는 학습 경험과 지속 가능한 학습 습관을 제공하세요"
         ]
     }
 };
@@ -345,6 +345,26 @@ function selectOption(type) {
     }
 }
 
+// MBTI 유형별 캐릭터 영상 파일명 매핑
+const characterVideos = {
+    INTJ: '01_INTJ_부엉이_학부모용_애니메이션.webp',
+    INTP: '02_INTP_여우_학부모용_애니메이션.webp',
+    ENTJ: '03_ENTJ_사자_학부모용_애니메이션.webp',
+    ENTP: '04_ENTP_앵무새_학부모용_애니메이션.webp',
+    INFJ: '05_INFJ_늑대_학부모용_애니메이션.webp',
+    INFP: '06_INFP_판다_학부모용_애니메이션.webp',
+    ENFJ: '07_ENFJ_돌고래_학부모용_애니메이션.webp',
+    ENFP: '08_ENFP_강아지_학부모용_애니메이션.webp',
+    ISTJ: '09_ISTJ_비버_학부모용_애니메이션.webp',
+    ISFJ: '10_ISFJ_코끼리_학부모용_애니메이션.webp',
+    ESTJ: '11_ESTJ_곰_학부모용_애니메이션.webp',
+    ESFJ: '12_ESFJ_토끼_학부모용_애니메이션.webp',
+    ISTP: '13_ISTP_고양이_학부모용_애니메이션.webp',
+    ISFP: '14_ISFP_사슴_학부모용_애니메이션.webp',
+    ESTP: '15_ESTP_호랑이_학부모용_애니메이션.webp',
+    ESFP: '16_ESFP_원숭이_학부모용_애니메이션.webp'
+};
+
 function showResult() {
     const styleType = 
         (scores.E > scores.I ? 'E' : 'I') +
@@ -357,9 +377,12 @@ function showResult() {
     document.getElementById('quizSection').style.display = 'none';
     document.getElementById('resultSection').style.display = 'block';
     
-    document.getElementById('resultEmoji').textContent = result.emoji;
-    document.getElementById('resultType').textContent = "SOLUTION";
-    document.getElementById('resultTitle').textContent = result.title;
+    // 캐릭터 영상 설정
+    const characterVideo = characterVideos[styleType];
+    const characterVideoElement = document.getElementById('resultCharacter');
+    characterVideoElement.src = `https://troypark.github.io/learningstyletestsource_parents/character_card/${characterVideo}`;
+    characterVideoElement.alt = `${styleType} 캐릭터 영상`;
+    
     document.getElementById('resultDescription').textContent = result.description;
     
     const methodsHtml = result.methods.map(method => `<li>${method}</li>`).join('');
@@ -368,8 +391,13 @@ function showResult() {
 
 // 공유하기 함수 (Web Share API 사용)
 function shareResult() {
-    const type = document.getElementById('resultType').textContent;
-    const title = document.getElementById('resultTitle').textContent;
+    const styleType = 
+        (scores.E > scores.I ? 'E' : 'I') +
+        (scores.S > scores.N ? 'S' : 'N') +
+        (scores.T > scores.F ? 'T' : 'F') +
+        (scores.J > scores.P ? 'J' : 'P');
+    const result = results[styleType];
+    const title = result.title;
     const description = document.getElementById('resultDescription').textContent;
     const url = window.location.href.split('?')[0];
     
@@ -473,4 +501,3 @@ function restartQuiz() {
     document.getElementById('resultSection').style.display = 'none';
     document.getElementById('startSection').style.display = 'block';
 }
-
