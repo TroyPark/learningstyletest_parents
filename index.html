@@ -49,7 +49,7 @@
         
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            background: linear-gradient(135deg, #FFB84D 0%, #FF8E53 100%);
+            background: linear-gradient(135deg, #FFF8F0 0%, #FFE8D6 50%, #FFF0E6 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -132,6 +132,38 @@
             opacity: 0.9;
         }
         
+        .banner-text .highlight-text {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .banner-text .highlight-text::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #FFF59D 0%, #FFEB3B 100%);
+            border-radius: 2px;
+        }
+        
+        .result-study-method .highlight-text {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .result-study-method .highlight-text::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #E65100 0%, #D84315 100%);
+            border-radius: 2px;
+        }
+        
         .banner-btn {
             background: white;
             color: #E65100;
@@ -152,9 +184,9 @@
         }
         
         .container {
-            background: white;
-            border-radius: 30px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            background: #FFFFFF;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
             max-width: 700px;
             width: 100%;
             padding: 50px;
@@ -169,7 +201,7 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,184,77,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255,184,77,0.03) 0%, transparent 70%);
             animation: rotate 20s linear infinite;
         }
         
@@ -321,10 +353,25 @@
             text-align: center;
         }
         
-        .result-emoji {
-            font-size: 10em;
-            margin: 20px 0;
-            animation: pop 0.6s ease-out;
+        .result-character {
+            max-width: 360px;
+            height: auto;
+            margin: 40px auto;
+            animation: fadeInUp 0.8s ease-out;
+            max-height: 640px;
+            display: block;
+            filter: drop-shadow(0 8px 24px rgba(0,0,0,0.1));
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .share-buttons {
@@ -337,74 +384,57 @@
         }
         
         .share-btn-main {
-            background: linear-gradient(135deg, #FFB84D 0%, #FF8E53 100%);
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
             color: white;
             border: none;
-            padding: 15px 50px;
-            border-radius: 50px;
+            padding: 16px 48px;
+            border-radius: 12px;
             cursor: pointer;
-            font-weight: 700;
+            font-weight: 600;
             transition: all 0.3s ease;
-            font-size: 1.2em;
-            box-shadow: 0 10px 30px rgba(255,142,83,0.3);
+            font-size: 1.1em;
+            box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
             text-decoration: none;
             display: inline-block;
             text-align: center;
         }
         
         .share-btn-main:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255,142,83,0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
         }
         
         .learn-more-btn {
-            background: linear-gradient(135deg, #E65100 0%, #D84315 100%);
+            background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+            box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
         }
         
         .learn-more-btn:hover {
-            box-shadow: 0 15px 40px rgba(230,81,0,0.5);
-        }
-        
-        @keyframes pop {
-            0% { transform: scale(0); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
-        }
-        
-        .result-type {
-            font-size: 2.5em;
-            color: #FF8E53;
-            font-weight: 900;
-            margin-bottom: 15px;
-        }
-        
-        .result-title {
-            font-size: 2em;
-            color: #333;
-            margin-bottom: 30px;
-            font-weight: 700;
+            box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
         }
         
         .result-description {
-            font-size: 1.2em;
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 20px;
+            font-size: 1.15em;
+            color: #4A4A4A;
+            line-height: 1.9;
+            margin-bottom: 30px;
             text-align: left;
+            padding: 0 10px;
         }
         
         .result-study-method {
-            background: linear-gradient(135deg, rgba(255,184,77,0.1) 0%, rgba(255,142,83,0.1) 100%);
-            padding: 30px;
-            border-radius: 20px;
-            margin: 30px 0;
+            background: #F8F9FA;
+            padding: 32px;
+            border-radius: 16px;
+            margin: 40px 0;
             text-align: left;
+            border: 1px solid #E9ECEF;
         }
         
         .result-study-method h3 {
-            color: #FF8E53;
-            font-size: 1.5em;
-            margin-bottom: 20px;
+            color: #2C3E50;
+            font-size: 1.4em;
+            margin-bottom: 24px;
             font-weight: 700;
         }
         
@@ -414,42 +444,46 @@
         }
         
         .result-study-method li {
-            padding: 12px 0;
-            padding-left: 30px;
+            padding: 14px 0;
+            padding-left: 32px;
             position: relative;
-            color: #555;
-            font-size: 1.1em;
+            color: #495057;
+            font-size: 1.05em;
+            line-height: 1.7;
         }
         
         .result-study-method li::before {
-            content: '✨';
+            content: '💡';
             position: absolute;
             left: 0;
+            font-size: 1.1em;
         }
         
         .restart-btn {
-            background: linear-gradient(135deg, #FFB84D 0%, #FF8E53 100%);
-            color: white;
-            border: none;
-            padding: 15px 50px;
-            font-size: 1.2em;
-            border-radius: 50px;
+            background: #FFFFFF;
+            color: #6366F1;
+            border: 2px solid #6366F1;
+            padding: 14px 48px;
+            font-size: 1.1em;
+            border-radius: 12px;
             cursor: pointer;
             margin-top: 30px;
-            font-weight: 700;
+            font-weight: 600;
             transition: all 0.3s ease;
         }
         
         .restart-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255,142,83,0.4);
+            background: #6366F1;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
         }
         
         .disclaimer {
-            font-size: 0.85em;
-            color: #999;
+            font-size: 0.8em;
+            color: #ADB5BD;
             text-align: center;
-            margin-top: 15px;
+            margin-top: 20px;
             margin-bottom: 10px;
         }
         
@@ -492,6 +526,16 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+            }
+            
+            .banner-text .highlight-text::after {
+                height: 4px;
+                bottom: -2px;
+            }
+            
+            .result-study-method .highlight-text::after {
+                height: 4px;
+                bottom: -2px;
             }
             
             .banner-text p {
@@ -549,46 +593,39 @@
                 padding: 18px;
             }
             
-            .result-emoji {
-                font-size: 4em;
-                margin: 10px 0;
-            }
-            
-            .result-type {
-                font-size: 1.8em;
-                margin-bottom: 8px;
-            }
-            
-            .result-title {
-                font-size: 1.3em;
-                margin-bottom: 12px;
+            .result-character {
+                max-width: 288px;
+                max-height: 512px;
+                margin: 30px auto;
             }
             
             .result-description {
-                font-size: 0.9em;
-                margin-bottom: 15px;
-                line-height: 1.5;
+                font-size: 0.95em;
+                margin-bottom: 24px;
+                line-height: 1.7;
+                padding: 0 5px;
             }
             
             .result-study-method {
-                padding: 15px;
-                margin: 15px 0;
+                padding: 20px;
+                margin: 30px 0;
+                border-radius: 12px;
             }
             
             .result-study-method h3 {
-                font-size: 1.1em;
-                margin-bottom: 12px;
+                font-size: 1.15em;
+                margin-bottom: 18px;
             }
             
             .result-study-method li {
-                font-size: 0.85em;
-                padding: 6px 0;
-                padding-left: 25px;
-                line-height: 1.4;
+                font-size: 0.9em;
+                padding: 10px 0;
+                padding-left: 28px;
+                line-height: 1.6;
             }
             
             .result-study-method li::before {
-                font-size: 0.9em;
+                font-size: 1em;
             }
             
             .share-buttons {
@@ -624,7 +661,7 @@
         <div class="banner-content">
             <img src="bi.png" alt="에이닷 영어학원" class="banner-logo">
             <div class="banner-text">
-                <h2>🎯 1:1 맞춤 영어학원 | 성적이 오르는 에이닷</h2>
+                <h2>🎯 <span class="highlight-text">1:1 맞춤 영어학원</span> | 성적이 오르는 에이닷</h2>
                 <p>우리학교 맞춤! 학생에 맞춤! 최적의 영어 학습법 💡</p>
             </div>
             <a href="https://www.adotenglish.com/" target="_blank" class="banner-btn" onclick="trackAdotVisit()">알아보기</a>
@@ -654,9 +691,7 @@
             
             <!-- 결과 화면 -->
             <div class="result-section" id="resultSection">
-                <div class="result-emoji" id="resultEmoji"></div>
-                <div class="result-type" id="resultType"></div>
-                <div class="result-title" id="resultTitle"></div>
+                <img class="result-character" id="resultCharacter" src="" alt="캐릭터">
                 <div class="result-description" id="resultDescription"></div>
                 <div class="result-study-method">
                     <h3>💡 이런 학부모가 되어주세요</h3>
