@@ -362,33 +362,55 @@ function showLoading() {
     const characterVideoElement = document.getElementById('resultCharacter');
     const videoUrl = `https://troypark.github.io/learningstyletestsource_parents/character_card/${characterVideo}`;
     
-    // 영상 로드 시작
-    characterVideoElement.src = videoUrl;
-    characterVideoElement.alt = `${styleType} 캐릭터 영상`;
-    
-    // 영상 로드 완료 또는 최소 3초 후 결과 표시
+    // 로딩 시작 시간 기록
+    const loadingStartTime = Date.now();
+    const minLoadingTime = 3000; // 최소 3초
     let resultShown = false;
-    const minDelay = setTimeout(() => {
-        if (!resultShown) {
-            resultShown = true;
-            showResult();
-        }
-    }, 3000);
     
-    characterVideoElement.onload = () => {
+    // 결과 표시 함수 (중복 방지)
+    const displayResult = () => {
         if (!resultShown) {
             resultShown = true;
-            clearTimeout(minDelay);
             showResult();
         }
     };
     
+    // 영상 로드 시작
+    characterVideoElement.src = videoUrl;
+    characterVideoElement.alt = `${styleType} 캐릭터 영상`;
+    
+    // 최소 3초 후 결과 표시
+    setTimeout(() => {
+        displayResult();
+    }, minLoadingTime);
+    
+    // 영상 로드 완료 시에도 최소 시간 확인
+    characterVideoElement.onload = () => {
+        const elapsedTime = Date.now() - loadingStartTime;
+        const remainingTime = minLoadingTime - elapsedTime;
+        
+        if (remainingTime > 0) {
+            // 아직 최소 시간이 지나지 않았으면 남은 시간만큼 대기
+            setTimeout(() => {
+                displayResult();
+            }, remainingTime);
+        } else {
+            // 이미 3초가 지났으면 즉시 표시 (하지만 위의 setTimeout이 이미 처리했을 수 있음)
+            displayResult();
+        }
+    };
+    
     characterVideoElement.onerror = () => {
-        // 로드 실패해도 최소 시간 후 표시
-        if (!resultShown) {
-            resultShown = true;
-            clearTimeout(minDelay);
-            showResult();
+        // 로드 실패해도 최소 시간 확인
+        const elapsedTime = Date.now() - loadingStartTime;
+        const remainingTime = minLoadingTime - elapsedTime;
+        
+        if (remainingTime > 0) {
+            setTimeout(() => {
+                displayResult();
+            }, remainingTime);
+        } else {
+            displayResult();
         }
     };
 }
