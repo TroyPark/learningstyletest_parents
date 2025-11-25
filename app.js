@@ -341,8 +341,56 @@ function selectOption(type) {
     if (currentQuestion < questions.length) {
         showQuestion();
     } else {
-        showResult();
+        showLoading();
     }
+}
+
+function showLoading() {
+    document.getElementById('quizSection').style.display = 'none';
+    document.getElementById('loadingSection').style.display = 'block';
+    document.getElementById('resultSection').style.display = 'none';
+    
+    // 결과 타입 계산
+    const styleType = 
+        (scores.E > scores.I ? 'E' : 'I') +
+        (scores.S > scores.N ? 'S' : 'N') +
+        (scores.T > scores.F ? 'T' : 'F') +
+        (scores.J > scores.P ? 'J' : 'P');
+    
+    // 영상 미리 로드 시작
+    const characterVideo = characterVideos[styleType];
+    const characterVideoElement = document.getElementById('resultCharacter');
+    const videoUrl = `https://troypark.github.io/learningstyletestsource_parents/character_card/${characterVideo}`;
+    
+    // 영상 로드 시작
+    characterVideoElement.src = videoUrl;
+    characterVideoElement.alt = `${styleType} 캐릭터 영상`;
+    
+    // 영상 로드 완료 또는 최소 3초 후 결과 표시
+    let resultShown = false;
+    const minDelay = setTimeout(() => {
+        if (!resultShown) {
+            resultShown = true;
+            showResult();
+        }
+    }, 3000);
+    
+    characterVideoElement.onload = () => {
+        if (!resultShown) {
+            resultShown = true;
+            clearTimeout(minDelay);
+            showResult();
+        }
+    };
+    
+    characterVideoElement.onerror = () => {
+        // 로드 실패해도 최소 시간 후 표시
+        if (!resultShown) {
+            resultShown = true;
+            clearTimeout(minDelay);
+            showResult();
+        }
+    };
 }
 
 // MBTI 유형별 캐릭터 영상 파일명 매핑
@@ -375,14 +423,10 @@ function showResult() {
     const result = results[styleType];
     
     document.getElementById('quizSection').style.display = 'none';
+    document.getElementById('loadingSection').style.display = 'none';
     document.getElementById('resultSection').style.display = 'block';
     
-    // 캐릭터 영상 설정
-    const characterVideo = characterVideos[styleType];
-    const characterVideoElement = document.getElementById('resultCharacter');
-    characterVideoElement.src = `https://troypark.github.io/learningstyletestsource_parents/character_card/${characterVideo}`;
-    characterVideoElement.alt = `${styleType} 캐릭터 영상`;
-    
+    // 영상은 이미 showLoading()에서 로드됨
     document.getElementById('resultDescription').textContent = result.description;
     
     const methodsHtml = result.methods.map(method => `<li>${method}</li>`).join('');
